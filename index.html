@@ -8,38 +8,132 @@
   <body> 
     
     <h1>
-      Choose file/drag drop/paste (ctrl-v) and select settings click warp to redraw.
+      Choose file/drag drop/paste(ctrl-v) and select settings click warp to redraw shapes.
     </h1>
     
-    <input type="file" id="file-selector">
-    
-    <button type="button" onclick="makeCanvas()">WARP</button>  &nbsp &nbsp <a id="download" download="myImage.jpg" href="" onclick="download_img(this);">SAVE IMAGE</a> <br>
-    <br>
-    <br>
-    <input type="text" id= "topText"onchange="makeCanvas()" > top text </input> <br>
-    <br>
-    <input type="text" id= "bottomText" onchange="makeCanvas()"> bottom text </input> 
-    <br>
-    <input id="textSize" type="range" min="30" max="200" value="80" onchange="makeCanvas()">Text Size</input><br>
 
-    <br>
-    <input type="color" id="bkgcolor" name="favcolor" value="#000000" onchange="makeCanvas()">  Background Color </input> <br>
-    <br>
   
-    
-    <input id="scale" type="range" min="1" max="100" value="10" onchange="makeCanvas()">Corner Size</input><br>
-     <br> Background Random Shapes: <input type="checkbox" id="myShapes" onclick="makeCanvas()" checked> <br>
+     <table style="width:100%">
+         
+         <tr>
+            <td>
 
-     <br> Show Corner Box: <input type="checkbox" id="myCheck" onclick="makeCanvas()"> Extra Border: <input type="checkbox" id="borderCheck" onclick="makeCanvas()" checked> <br>
+            </td>
+            <td>
+                Extra Border: <input type="checkbox" id="borderCheck" onclick="makeCanvas()">
+            </td>
+            <td>
+                             <input id="scale" type="range" min="1" max="100" value="10" onchange="makeCanvas()">Border Size</input>
 
-     <input type="color" id="favcolor" name="favcolor" value="#ff0000" onchange="makeCanvas()">  Box Color </input> 
+            </td>
+        </tr>
+         <tr>
+            <td>
 
-     <br>
-     
-     IMAGE SIZE BUTTONS: <button style="font-size:50px; font-weight: 900;" onclick="pic_func(-1)">-</button> <button style="font-size:50px; font-weight: 900;"  onclick="pic_func(0)">Reset</button> <button style="font-size:50px; font-weight: 900;" onclick="pic_func(1)">+</button>
-     <input id="aSlider" type="range" min="1" max="100" value="85" onchange="makeCanvas()"> Transparency </input>
-     &nbsp &nbsp <input id="jpgSlider" type="range" min="1" max="100" value="90" onchange="makeCanvas()" oninput="qoutputId.value = this.value" > JPG Quality </input><output id="qoutputId">90</output>
-<br><br>
+            </td>
+            <td>
+            
+            </td>
+            <td>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <input type="color" id="bkgcolor" name="favcolor" value="#000000" onchange="makeCanvas()">  Background Color </input>
+
+            </td>
+            <td>
+                Background Random Shapes: <input type="checkbox" id="myShapes" onclick="makeCanvas()" >
+            </td>
+            <td>
+            
+            </td>
+        </tr>
+          
+        <tr>
+            <td>
+                                     <input type="color" id="favcolor" name="favcolor" value="#ff0000" onchange="makeCanvas()">  Box Color </input> 
+ 
+
+            </td>
+            <td>
+            
+            </td>
+            <td>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Show Corner Box: <input type="checkbox" id="myCheck" onclick="makeCanvas()"> 
+            </td>
+            <td>
+                      <input type="file" id="file-selector">         
+
+            </td>
+            <td>
+            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                IMAGE SIZE BUTTONS: 
+            </td>
+            <td>
+                 <a id="download" download="myImage.jpg" href="" onclick="download_img(this);">SAVE IMAGE</a> 
+            </td>
+            <td>
+                
+                    <button type="button" onclick="makeCanvas()">WARP</button>  &nbsp &nbsp 
+            </td>
+        </tr>
+         
+       
+        <tr>
+            <td>
+                <button style="font-size:50px; font-weight: 900;" onclick="pic_func(-1)">-</button> <button style="font-size:50px; font-weight: 900;"  onclick="pic_func(0)">Reset</button> <button style="font-size:50px; font-weight: 900;" onclick="pic_func(1)">+</button>
+            </td>
+            <td>
+                <table style="width=100%">
+                    <tr>
+                        <td>
+                            <input type="text" id= "topText"onchange="makeCanvas()" > top text </input> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" id= "bottomText" onchange="makeCanvas()"> bottom text </input> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="textSize" type="range" min="30" max="200" value="80" onchange="makeCanvas()">Text Size</input>
+                        </td>
+                    </tr>
+                        
+                </table>
+            </td>
+            <td>
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <input id="aSlider" type="range" min="1" max="100" value="100" onchange="makeCanvas()"> Transparency </input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="jpgSlider" type="range" min="1" max="100" value="90" onchange="makeCanvas()" oninput="qoutputId.value = this.value" > JPG Quality </input>
+                            <output id="qoutputId">90</output>
+                        </td>
+                   
+                    </tr>
+                 </table>
+  
+            </td>
+        </tr>
+        
+     </table>
     
     <p id="status"></p>
     <div>
